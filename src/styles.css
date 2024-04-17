@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .bodyContent {
+    @apply dark:bg-[#211F22] bg-white;
+  }
+  .bottomNavigation {
+    @apply lg:hidden fixed grid grid-cols-4 bottom-0 w-full 
+    rounded-t-xl bg-[#282629] shadow-[0px_0px_1px_1px_#4a5568];
+  }
+  .NavigationItem {
+    @apply grid gap-2 text-center text-white text-sm p-2;
+  }
+  .navSVG {
+    @apply w-8 mx-auto hover:bg-gray-600 hover:p-1 
+    transition-[1s] rounded-full cursor-pointer;
+  }
+  .navImg {
+    @apply w-8 aspect-square rounded-full mx-auto 
+    hover:bg-gray-600 hover:p-1 transition-[1s] cursor-pointer;
+  }
+  .appContent {
+    @apply w-full lg:w-3/4 mx-auto md:rounded-xl;
+  }
+  .contentHead {
+    @apply relative w-full min-h-[50vh] 
+    bg-cover rounded-b-xl md:rounded-t-xl shadow-[inset_0px_0px_200px_50px_#2e2e2e];
+  }
+  .headTop {
+    @apply grid grid-cols-5 lg:w-1/2;
+  }
+  .iconContainer {
+    @apply grid grid-cols-4 gap-2 p-2 w-full lg:w-4/5 mx-auto;
+  }
+  .mainIcons {
+    @apply grid gap-2 text-center mx-auto my-2 cursor-pointer;
+  }
+  .popularList {
+    @apply relative px-2 mt-10 lg:mt-20 flex gap-3 overflow-hidden overflow-x-scroll;
+  }
+}
+
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.dropbtn {
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #565454;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 12px;
+  text-decoration: none;
+  display: block;
+  border-radius: 10px;
+}
+
+.dropdown-content a:hover {
+  background-color: #484545;
+  width: 100%;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #525652;
+}
+
+
+
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scroll-bar-color) var(--scroll-bar-bg-color);
+}
